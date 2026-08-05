@@ -8,14 +8,14 @@ import Tentang from "./pages/Tentang";
 export default function App() {
   return (
   <BrowserRouter>
-    <Route>
+    <Routes>
       <Route path="/" element={<Layout />}>
          <Route index element={<Home />}/>
          <Route path="produk" element={<Produk />}/>
          <Route path="kategori" element={<Kategori />}/>
          <Route path="tentang" element={< Tentang />}/>
       </Route>
-    </Route>
+    </Routes>
   </BrowserRouter>
   )
 }
