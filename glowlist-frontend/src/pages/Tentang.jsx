@@ -6,7 +6,7 @@ export default function Tentang() {
       <p><strong>Nama:</strong>Anggita Nur Hanifah</p>
       <p><strong>Kelas:</strong> XII RPL</p>
 
-      <h3>Alasan Suka Skincare</h3>
+      <h3>Alasan Sukba Skincare</h3>
       <p>
         Saya suka skincare karena dapat membantu menjaga kesehatan kulit,
         membuat wajah tetap bersih, dan meningkatkan rasa percaya diri.
