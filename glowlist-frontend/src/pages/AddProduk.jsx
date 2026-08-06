@@ -11,7 +11,7 @@ export default function AddProduk() {
 
     const navigate = useNavigate();
 
-    const handleChange = useNavigate = (e) => {
+    const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value });
 
     };
@@ -64,9 +64,22 @@ export default function AddProduk() {
                     </textarea>
                 </div>
 
+                <div className="mb-3">
+                    <label className="form-label">Harga</label>
+                    <input
+                    type="number"
+                    name="harga"
+                    value={formData.harga}
+                    onChange={handleChange}
+                    className="form-control"
+                    placeholder="masukan harga"
+                    required
+                    />
+                </div>
+
                 <div className="mb-3>">
                     <label className="form-label">ID Kategori</label>
-                    <input 
+                    <select
                     type="number"
                     name="id_kategori"
                     value={formData.id_kategori}
