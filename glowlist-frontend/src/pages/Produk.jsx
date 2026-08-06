@@ -46,7 +46,7 @@ export default function Produk() {
                                 <td>{item.id_produk}</td>
                                 <td>{item.judul}</td>
                                 <td>{item.deskripsi}</td>
-                                <td>Rp.\ {item.harga}</td>
+                                <td>Rp.{item.harga}</td>
                             </tr>
                         ))
                     ) : (
