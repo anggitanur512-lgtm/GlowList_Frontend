@@ -9,6 +9,7 @@ export default function Kategori() {
             const res = await fetch("http://localhost:5000/kategori");
             const data = await res.json();
             setKategori(data);
+            
         } catch (err) {
             console.error("Gagal fetch data:", err);
         } finally {
