@@ -4,6 +4,7 @@ export default function Produk() {
     const [produk, setProduk] = useState([]);
     const [loading, setLoading] = useState ([]);
     const navigate =useNavigate()
+
     const getProduk = async () => {
         try {
             const res = await fetch("http://localhost:5000/produk");
@@ -64,6 +65,8 @@ export default function Produk() {
                         <th>Judul</th>
                         <th>Deskripsi</th>
                         <th>Harga</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -82,6 +85,8 @@ export default function Produk() {
                                         >
                                             Edit
                                         </button>
+                                        </td>
+                                        <td>
                                         <button 
                                         className="btn btn-danger btn-sm"
                                         onClick={ () => handleDelete(item.id_produk)}
