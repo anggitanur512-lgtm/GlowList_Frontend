@@ -8,6 +8,7 @@ export default function AddProduk() {
         harga:"",
         id_kategori:"",
     });
+    const [file, setFile] = useState(null);
 
     const [kategori, setKategori] = useState([])
 
@@ -26,6 +27,13 @@ export default function AddProduk() {
     };
     const handlesSubmit = async (e) => {
         e.preventDefault();
+
+        const data = new FormData();
+        data.append("judul", formData.judul);
+        data.append("deskripsi", formData.deskripsi);
+        data.append("harga", formData.harga);
+        data.append("id_kategori", formData.id_kategori);
+        data.append("file", file);
         try {
             const res = await fetch("http://localhost:5000/produk", {
                 method: "POST",
@@ -101,6 +109,15 @@ export default function AddProduk() {
                     <option value="2">-- moisturaizer  --</option>
                     <option value="3">-- sunscreen --</option>
                     </select>
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Foto Produk</label>
+                    <input
+                        type="file"
+                        accept="image/*"
+                        className="form-control"
+                        onChange={(e) => setFile(e.target.files[0])}
+                        />
                 </div>
                 <button type="sumbit" className="btn btn-success">
                     simpan
